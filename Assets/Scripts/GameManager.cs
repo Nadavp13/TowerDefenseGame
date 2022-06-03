@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
+
         if (PlayerStats.Lives <= 0)
         {
             EndGame();
@@ -41,6 +42,5 @@ public class GameManager : MonoBehaviour
         Debug.Log(newCash);
         GameIsOver = true;
         completeLevelUI.SetActive(true);
-
     }
 }

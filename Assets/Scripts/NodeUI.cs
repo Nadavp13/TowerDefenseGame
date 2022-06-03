@@ -11,23 +11,11 @@ public class NodeUI : MonoBehaviour
     public Button upgradeButton;
     public Text sellAmount;
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
     public void SetTarget(Node i_target)
     {
         target = i_target;
 
         transform.position = target.GetBuildPosition();
-
         if (!i_target.isUpgraded)
         {
             upgradeCost.text = target.turretBlueprint.upgradeCost + "$";
@@ -42,7 +30,6 @@ public class NodeUI : MonoBehaviour
         sellAmount.text = target.turretBlueprint.GetSellAmount() + "$";
         
         UI.SetActive(true);
-
     }
 
     public void Hide()

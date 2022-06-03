@@ -5,7 +5,6 @@ public class LevelSelector : MonoBehaviour
 {
     public SceneFader sceneFader;
     public Button[] levelButtons;
-
     
     // Start is called before the first frame update
     void Start()
@@ -16,12 +15,6 @@ public class LevelSelector : MonoBehaviour
             if(i + 1 > levelReached)
                 levelButtons[i].interactable = false;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Select(string levelName)

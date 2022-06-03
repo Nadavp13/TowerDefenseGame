@@ -8,24 +8,20 @@ public class Enemy : MonoBehaviour
 	public static int EnemiesKilled = 0;
 	[HideInInspector]
 	public float speed;
-
 	public float startHealth = 100;
 	private float health;
-
 	public int worth = 50;
 
 	public GameObject deathEffect;
 
-	public HealthBar healthBarr;
+	public HealthBar healthBar;
 	public Transform healthBarCanvas;
 	public float healthBarY = 0;
 	public float healthBarZ = 0;
 
 	[Header("Unity Stuff")]
-	//public Image healthBar;
 	public static float spawnOffset = -2f;
 	private Vector3 offset = new Vector3(0, spawnOffset, 0);
-	//public Transform partToRotate;
 
 	private bool isDead = false;
 	
@@ -34,17 +30,15 @@ public class Enemy : MonoBehaviour
 	{
 		speed = startingSpeed;
 		health = startHealth;
+		healthBar.SetMaxHealth(health);
 		//Offset
 		transform.position += offset;
-		healthBarr.SetMaxHealth(health);
 	}
 
 	public void TakeDamage(float amount)
 	{
 		health -= amount;
-
-		//healthBar.fillAmount = health / startHealth;
-		healthBarr.SetHealth(health);
+		healthBar.SetHealth(health);
 		if (health <= 0 && !isDead)
 		{
 			Die();
@@ -59,7 +53,6 @@ public class Enemy : MonoBehaviour
 	void Die()
 	{
 		isDead = true;
-
 		PlayerStats.Money += worth;
 
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -67,15 +60,12 @@ public class Enemy : MonoBehaviour
 
 		WaveSpawner.enemiesAlive--;
 		EnemiesKilled++;
-		//AchievementMaster.ach01Count++;
-
-
 		Destroy(gameObject);
 	}
 
 	public static int GetEnemiesKilled()
     {
+
 		return EnemiesKilled;
     }
-
 }

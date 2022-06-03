@@ -22,13 +22,6 @@ public class TurretBlueprint
             Debug.log(playerPref);
             upgradesAvailable = PlayerPrefs.GetInt(playerPref, new int[3]);
         }*/
-        
-}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public int GetSellAmount()

@@ -12,10 +12,4 @@ public class ShopUI : MonoBehaviour
     {
         moneyAmount.text = "Money: " + PlayerPrefs.GetInt("Cash", 0).ToString() + "$";
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

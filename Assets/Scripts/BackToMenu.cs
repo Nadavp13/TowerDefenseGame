@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
-
 	public SceneFader sceneFader;
 	public void MainMenu()
 	{

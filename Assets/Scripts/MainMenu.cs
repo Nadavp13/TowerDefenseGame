@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-
-	
-
 	public string levelToLoad = "LevelSelect";
 	public Button shopButton;
 	public SceneFader sceneFader;
@@ -36,5 +33,4 @@ public class MainMenu : MonoBehaviour
 		Debug.Log("Exiting game...");
 		Application.Quit();
 	}
-
 }	

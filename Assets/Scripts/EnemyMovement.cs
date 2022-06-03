@@ -22,16 +22,11 @@ public class EnemyMovement : MonoBehaviour
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 		enemy.healthBarCanvas.position = enemy.transform.position + offsetVector;
-		//
-
-		//
 
 		if (Vector3.Distance(transform.position, target.position) <= 0.4f)
 		{
 			GetNextWaypoint();
 			transform.LookAt(target);
-			//enemy.partToRotate.Rotate(55f, 0f, 0f);
-			//enemy.partToRotate.rotation = Quaternion.Euler(55f, 0f, 0f);
 		}
 
 		enemy.speed = enemy.startingSpeed;
@@ -68,5 +63,4 @@ public class EnemyMovement : MonoBehaviour
 			return -90f;
 		else return 0;
     }
-
 }

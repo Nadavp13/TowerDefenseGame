@@ -13,12 +13,6 @@ public class Bullet : MonoBehaviour
         target = io_target;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +32,6 @@ public class Bullet : MonoBehaviour
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
         transform.LookAt(target);
-
     }
 
     void HitTarget()
@@ -56,7 +49,6 @@ public class Bullet : MonoBehaviour
         }
         
         Destroy(gameObject);
-        //return;
     }
 
     void Explode()

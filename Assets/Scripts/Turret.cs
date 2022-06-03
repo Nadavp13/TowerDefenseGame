@@ -77,6 +77,7 @@ public class Turret : MonoBehaviour
                     impactLight.enabled = false;
                 }
             }
+
             return;
         }
 
@@ -118,8 +119,6 @@ public class Turret : MonoBehaviour
             impactEffect.Play();
             impactLight.enabled = true;
         }
-
-        
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
 

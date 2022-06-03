@@ -15,11 +15,6 @@ public class WaveSpawner : MonoBehaviour
     public GameManager gameManager;
     public bool stopRounds = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -42,34 +37,18 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
+
         if (countdown <= 0) 
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             return;
         }
+
         countdown -= Time.deltaTime;
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         waveCountdownText.text = string.Format("{0:00.00}", countdown);
-        //waveCountdownText.text = Mathf.Round(countdown).ToString();
     }
-
-    /*IEnumerator SpawnWave()
-    {
-        PlayerStats.Rounds++;
-
-        Wave wave = waves[waveIndex];
-        enemiesAlive = wave.count;
-        for (int i = 0; i < wave.count; i++)
-        {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f / wave.rate);
-        }
-
-        waveIndex++;
-
-        
-    }*/
 
     IEnumerator SpawnWave()
     {
@@ -86,20 +65,14 @@ public class WaveSpawner : MonoBehaviour
             }
             
         }
-
         waveIndex++;
         PlayerStats.Money += 100;
-
-
     }
-
 
     void SpawnEnemy(GameObject enemy) 
     {
-        
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
-
 
     int CalcEnemies(Wave wave)
     {

@@ -53,7 +53,7 @@ MonoBehaviour:
   startHealth: 2000
   worth: 100
   deathEffect: {fileID: 4543265119053326144, guid: f54e470ba162d2542a85f69d6a6f2d8d, type: 3}
-  healthBarr: {fileID: 5303999185765349089}
+  healthBar: {fileID: 5303999185765349089}
   healthBarCanvas: {fileID: 169988631908936012}
   healthBarY: 5
   healthBarZ: 3.5

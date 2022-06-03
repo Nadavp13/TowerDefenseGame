@@ -27,12 +27,6 @@ public class Node : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public Vector3 GetBuildPosition()
     {
@@ -45,10 +39,12 @@ public class Node : MonoBehaviour
         {
             return;
         }
+
         if (!buildManager.CanBuild)
         {
             return;
         }
+
         if (turret == null && buildManager.HasMoney)
         {
             rend.material.color = hoverColor;
@@ -57,7 +53,6 @@ public class Node : MonoBehaviour
         {
             rend.material.color = cantPlaceOnNodeColor;
         }
-
     }
     void OnMouseExit()
     {
@@ -82,9 +77,7 @@ public class Node : MonoBehaviour
         {
             return;
         }
-
         BuildTurret(buildManager.GetTurretToBuild());
-
     }
 
     void BuildTurret(TurretBlueprint blueprint)
@@ -128,7 +121,5 @@ public class Node : MonoBehaviour
         GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
         Destroy(effect, 5f);
         turretBlueprint = null;
-
     }
-
 }

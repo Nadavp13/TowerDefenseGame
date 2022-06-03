@@ -13,17 +13,6 @@ public class BuildManager : MonoBehaviour
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
-    // Start is called before the first frame update
-    void Start()
-    {
-        //turretToBuild = standardTurretPrefab;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void Awake()
     {
@@ -61,10 +50,5 @@ public class BuildManager : MonoBehaviour
     {
         selectedNode = null;
         nodeUI.Hide();
-
     }
-
-    
-
-    
 }

@@ -17,13 +17,6 @@ public class PlayerStats : MonoBehaviour
         Money = startMoney;
         Lives = startLives;
         Rounds = 0;
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public static int GetMoney()

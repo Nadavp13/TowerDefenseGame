@@ -2036,11 +2036,10 @@ MonoBehaviour:
   startHealth: 300
   worth: 20
   deathEffect: {fileID: 4543265119053326144, guid: f54e470ba162d2542a85f69d6a6f2d8d, type: 3}
-  healthBarr: {fileID: 3197311877790510003}
+  healthBar: {fileID: 3197311877790510003}
   healthBarCanvas: {fileID: 7466791009404285982}
   healthBarY: 4.5
   healthBarZ: 2.5
-  healthBar: {fileID: 2547888531196416754}
 --- !u!114 &-7479982020531405911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,7 +2052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3b93e4b9bfdb144a3e4e360e2733d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetVector: {x: 0, y: 0, z: 0}
 --- !u!135 &-6260957764651766650
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2270,17 +2268,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7431368996836032598, guid: 1a4dbf44274c4f44a92b8d39472e9894, type: 3}
   m_PrefabInstance: {fileID: 1540397225045292215}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2547888531196416754 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3907853457466549829, guid: 1a4dbf44274c4f44a92b8d39472e9894, type: 3}
-  m_PrefabInstance: {fileID: 1540397225045292215}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7147967794849495813
 PrefabInstance:
   m_ObjectHideFlags: 0

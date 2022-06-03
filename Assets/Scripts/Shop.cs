@@ -14,12 +14,6 @@ public class Shop : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SelectStandardTurret()
     {   
         buildManager.SelectTurretToBuild(standardTurret);
@@ -29,6 +23,7 @@ public class Shop : MonoBehaviour
     {
         buildManager.SelectTurretToBuild(missileLauncer);
     }
+
     public void SelectLaserBeamer()
     {
         buildManager.SelectTurretToBuild(laserBeamer);
