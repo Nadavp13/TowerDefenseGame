@@ -8,17 +8,20 @@ public class EnemyMovement : MonoBehaviour
 	private Transform target;
 	private int wavepointIndex = 0;
 	private Enemy enemy;
+	private Vector3 offsetVector;
 
 	void Start()
 	{
 		enemy = GetComponent<Enemy>();
 		target = Waypoints.points[0];
+		offsetVector = new Vector3(0f, enemy.healthBarY, enemy.healthBarZ); 
 	}
 
 	void Update()
 	{
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+		enemy.healthBarCanvas.position = enemy.transform.position + offsetVector;
 		//
 
 		//

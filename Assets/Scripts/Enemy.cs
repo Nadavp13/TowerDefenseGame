@@ -16,8 +16,13 @@ public class Enemy : MonoBehaviour
 
 	public GameObject deathEffect;
 
+	public HealthBar healthBarr;
+	public Transform healthBarCanvas;
+	public float healthBarY = 0;
+	public float healthBarZ = 0;
+
 	[Header("Unity Stuff")]
-	public Image healthBar;
+	//public Image healthBar;
 	public static float spawnOffset = -2f;
 	private Vector3 offset = new Vector3(0, spawnOffset, 0);
 	//public Transform partToRotate;
@@ -31,14 +36,15 @@ public class Enemy : MonoBehaviour
 		health = startHealth;
 		//Offset
 		transform.position += offset;
+		healthBarr.SetMaxHealth(health);
 	}
 
 	public void TakeDamage(float amount)
 	{
 		health -= amount;
 
-		healthBar.fillAmount = health / startHealth;
-
+		//healthBar.fillAmount = health / startHealth;
+		healthBarr.SetHealth(health);
 		if (health <= 0 && !isDead)
 		{
 			Die();

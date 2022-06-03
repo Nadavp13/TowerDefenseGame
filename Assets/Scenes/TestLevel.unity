@@ -5773,7 +5773,7 @@ MonoBehaviour:
     - {fileID: 8061654117059054286, guid: aef0b1bf09a88e74093f5ba9d483e2c8, type: 3}
     - {fileID: 8753619234690991416, guid: e812c04705f47d645beb13e90ec0ff93, type: 3}
     - {fileID: 1639818050706832, guid: 28fce92923d67c2449f9c3d295c70aef, type: 3}
-    count: 0000000000000000000000000000000001000000
+    count: 0000000000000000000000000100000000000000
     rate:
     - 2
     - 2
@@ -5889,7 +5889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b1cbbbb80985a47982fae899e47b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 650
+  startMoney: 6650
   startLives: 50
 --- !u!114 &504174035
 MonoBehaviour:
