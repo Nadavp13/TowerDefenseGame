@@ -1,5 +1,9 @@
-# Game updates:
+# Tower Defense Game
 
+## How to run the game
+	To run the game simply download the repository and double click the TowerDefense.exe
+
+## Game updates:
 	Bugs fixed last update:
 	• Rotating healthbars
 
